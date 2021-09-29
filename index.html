@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>String Manipulation</title>
+</head>
+
+<body>
+    <div id="app">
+        <input v-model="word" placeholder="Name">
+        <button id="button" v-on:click="showIt()" class="btn btn-primary">Show it</button>
+        <div>
+            <ol>
+                <li>{{word}}</li>
+                <li>{{lower}}</li>
+                <li>{{upper}}</li>
+            </ol>
+        </div>
+
+        <div class="container">
+            <h2>Table for string manipulation</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Default</th>
+                        <th>LowerCase</th>
+                        <th>UpperCase</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{word}}</td>
+                        <td>{{lower}}</td>
+                        <td>{{upper}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
